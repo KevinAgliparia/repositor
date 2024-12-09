@@ -1,0 +1,362 @@
+/* Reset */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: #f4f4f9;
+    color: #333;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    padding: 20px;
+    width: 100%; /* Use the full width of the screen */
+    max-width: 100%; /* Remove max-width limitation */
+    height: 100vh; /* Use the full height of the viewport */
+    box-sizing: border-box; /* Include padding in width and height calculation */
+    margin: 0; /* Remove any margins to make it flush with the edges */
+    overflow-y: auto; /* Allow scrolling if content exceeds the screen height */
+    background-color: #f5f5f5; /* Optional: Add a background color */
+}
+@media (max-width: 768px) {
+    .dashboard-container {
+        padding: 10px;
+    }
+}
+
+
+/* Header Section */
+.header-section {
+    background: #0984e3;
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 20px;
+    height: 50vh;           /* Set height to 50% of the viewport height */
+    display: flex;          /* Enable flexbox for centering content */
+    flex-direction: column; /* Align content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center;     /* Center content horizontally */
+    box-sizing: border-box; /* Include padding in height calculations */
+    position: relative;
+}
+
+.header-section h1 {
+    margin: 0;
+    font-size: 34px;
+    letter-spacing: 1px;
+}
+
+.header-section h2 {
+    margin-top: 5px;
+    font-size: 18px;
+}
+
+/* Projects Section */
+.projects-section {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.projects-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.projects-header h3 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.project-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#search-bar {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 250px;
+}
+
+/* Upload Button */
+.open-modal-btn {
+    background: #0984e3;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.open-modal-btn:hover {
+    background: #74b9ff;
+}
+
+/* Project Cards */
+.project-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.project-card-header h4 {
+    margin: 0;
+    color: #0984e3;
+    font-size: 18px;
+}
+
+.project-card-body {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-card:hover {
+    transform: scale(1.02);
+}
+
+.action-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.download-btn {
+    background: #6c5ce7;
+    color: white;
+}
+
+.download-btn:hover {
+    background: #a29bfe;
+}
+
+.delete-btn {
+    background: #d63031;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #ff7675;
+}
+
+/* Logout Section */
+.logout-section {
+    position: absolute;
+    top: 10px; /* Adjusts the vertical spacing */
+    right: 20px; /* Adjusts the horizontal spacing */
+}
+
+.logout-btn {
+    background: #d63031;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.logout-btn:hover {
+    background: #e74c3c; /* Slightly lighter red on hover */
+}
+/* Modal Container */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000; /* Ensures the modal appears above other content */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enables scrolling if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent background */
+    padding-left: 40px; /* Add some extra padding on the left side */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    margin: 10% auto; /* Center horizontally */
+    padding: 20px;
+    border-radius: 8px;
+    width: 40%; /* Adjust width as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease; /* Smooth entry animation */
+    padding-right: 40px; /* Add some extra padding on the left side */
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Input Fields */
+.modal-content label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Submit Button */
+.modal-submit-btn {
+    background-color: #007BFF; /* Button color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.modal-submit-btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+
+/* Modal Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-textarea {
+    width: 100%;
+    height: 200px; /* Adjust this value to your needs */
+  }
+
+  @media (max-width: 600px) {
+    .modal textarea {
+      height: 150px; /* Adjust this value to your needs */
+    }
+  }
+
+  @media (max-width: 400px) {
+    .modal textarea {
+      height: 100px; /* Adjust this value to your needs */
+    }
+  }
+
+  .edit-btn, .save-btn, .cancel-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    background-color: #dc3545;
+}
+
+.edit-btn:hover, .save-btn:hover, .cancel-btn:hover {
+    opacity: 0.9;
+}
+.btn-link {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007bff; /* Button color */
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.btn-link:hover {
+    background-color: #0056b3; /* Hover color */
+}
+
+#members-container {
+    margin-bottom: 10px;
+}
+
+.member-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.member-input input {
+    flex: 1;
+    padding: 8px;
+    margin-right: 5px;
+}
+
+.member-input button {
+    background: #d63031;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.member-input button:hover {
+    background: #e74c3c;
+}
+
+#add-member-btn {
+    background: #0984e3;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#add-member-btn:hover {
+    background: #74b9ff;
+}

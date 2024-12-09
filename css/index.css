@@ -1,0 +1,62 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #1e1f29; /* Dark blue-gray for futuristic feel */
+    color: #d1d1e9; /* Soft white-blue for text */
+}
+
+/* Container styling */
+.entry-container {
+    background: linear-gradient(145deg, #222331, #1b1c27); /* Dark gradient background */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px #16171f, -10px -10px 20px #2a2b3d; /* Darker shadow */
+    text-align: center;
+    max-width: 350px;
+}
+
+/* Heading styling */
+.entry-container h2 {
+    margin-bottom: 30px;
+    color: #8ec5fc; /* Cool neon blue for heading text */
+}
+
+/* Button styling */
+.link-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.entry-link {
+    background: linear-gradient(145deg, #32344a, #1f202d); /* Dark gradient for buttons */
+    color: #8ec5fc; /* Neon blue */
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 5px 5px 15px rgba(0, 255, 255, 0.2), -5px -5px 15px rgba(0, 255, 255, 0.2); /* Neon glow effect */
+    transition: all 0.3s ease;
+}
+
+.entry-link:hover {
+    background: linear-gradient(145deg, #1f202d, #32344a); /* Reverse gradient on hover */
+    box-shadow: inset 5px 5px 15px rgba(0, 255, 255, 0.2), inset -5px -5px 15px rgba(0, 255, 255, 0.2); /* Inner neon glow */
+    color: #00f0ff; /* Bright cyan on hover */
+}
+
+.entry-link:active {
+    box-shadow: inset 3px 3px 10px rgba(0, 255, 255, 0.3), inset -3px -3px 10px rgba(0, 255, 255, 0.3); /* Stronger inner shadow */
+    color: #00a3b3; /* Darker cyan on active */
+}

@@ -1,0 +1,105 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1f1f2e; /* Dark background for contrast */
+}
+
+.container {
+    background: linear-gradient(145deg, #2c2c3e, #191926); /* Dark gradient background */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 20px 20px 40px #14141f, -20px -20px 40px #2e2e44; /* Darker shadows for depth */
+}
+
+h2 {
+    color: #8ec5fc; /* Neon blue for heading */
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px #00f0ff, -1px -1px 2px #333; /* Soft neon shadow for futuristic glow */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 300px;
+}
+
+.input-group {
+    position: relative;
+}
+
+label {
+    display: block;
+    color: #8ec5fc;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 12px;
+    background: #1f1f2e;
+    box-shadow: inset 5px 5px 10px #14141f, inset -5px -5px 10px #2e2e44;
+    color: #8ec5fc;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    box-shadow: inset 8px 8px 16px #14141f, inset -8px -8px 16px #2e2e44;
+    color: #00f0ff; /* Brightened text color on focus */
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 12px;
+    background: #1f1f2e;
+    box-shadow: 5px 5px 15px rgba(0, 255, 255, 0.3), -5px -5px 15px rgba(0, 255, 255, 0.3); /* Neon glow effect */
+    color: #8ec5fc;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    box-shadow: 8px 8px 20px rgba(0, 255, 255, 0.3), -8px -8px 20px rgba(0, 255, 255, 0.3); /* Glow intensifies on hover */
+}
+
+button:active {
+    box-shadow: inset 5px 5px 10px #14141f, inset -5px -5px 10px #2e2e44; /* Inner shadow effect on click */
+}
+
+p {
+    margin-top: 20px;
+    text-align: center;
+    color: #8ec5fc;
+    font-size: 14px;
+}
+
+a {
+    color: #00f0ff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    text-shadow: 0 0 4px #00f0ff, 0 0 8px #00f0ff; /* Neon glow on hover */
+}
